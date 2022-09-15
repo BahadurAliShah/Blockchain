@@ -50,6 +50,6 @@ func main() {
 
 	for _, v := range st {
 		stringToHash := v.name + v.address + strconv.Itoa(v.rollnumber) + strings.Join(v.courses, "")
-		fmt.Printf("SHA256 of %s is %x\n", v.name, sha256.Sum256([]byte(stringToHash)))
+		fmt.Printf("SHA256 of %s is %x\n", stringToHash, sha256.Sum256([]byte(stringToHash)))
 	}
 }
